@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ふくみー・ポータルサイト</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="notebook-container">
+        <!-- Margin decorations -->
+        <div class="margin-note" style="top: 10%; left: 2%;">
+            <img src="assets/star.svg" alt="star" class="icon-star">
+            <span>ひらめき！</span>
+        </div>
+        <div class="margin-note" style="top: 40%; right: 2%;">
+            <img src="assets/arrow.svg" alt="arrow" class="icon-arrow" style="transform: rotate(150deg);">
+            <span>TODO: 未来をつくる</span>
+        </div>
+        <div class="coffee-stain" style="bottom: 5%; left: 5%;">
+            <img src="assets/coffee.svg" alt="coffee stain">
+        </div>
+
+        <header>
+            <h1 class="catchphrase">「頑張っている人が、すり減らない未来をつくる。」</h1>
+        </header>
+
+        <main>
+            <section class="achievements">
+                <h2 class="hand-drawn-underline">実績紹介</h2>
+                <ul class="notebook-list">
+                    <li>法人のDX伴走支援（業務フローの可視化と改善）</li>
+                    <li>AIを活用したピッチ資料の制作支援</li>
+                    <li>生成AI導入ワークショップの企画・運営</li>
+                    <li>コミュニティ運営の自動化ツール開発</li>
+                </ul>
+            </section>
+
+            <section class="tools">
+                <h2 class="hand-drawn-underline">魔法の道具箱（アプリ一覧）</h2>
+                <div class="sticky-notes-grid">
+                    <a href="#" class="sticky-note blue">
+                        <h3>LINEタスク管理ボット</h3>
+                        <p>日々のタスクをLINEでサクッと管理。AIがリマインドしてくれます。</p>
+                    </a>
+                    <a href="#" class="sticky-note yellow">
+                        <h3>領収書まとめBase</h3>
+                        <p>スマホで撮るだけ。AIが自動で項目を抽出してDB化します。</p>
+                    </a>
+                    <a href="#" class="sticky-note pink">
+                        <h3>未来予測ダイアリー</h3>
+                        <p>AIと共に10年後の自分をデザインするワークスペース。</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Chatbot -->
+        <div id="chat-container" class="chat-minimized">
+            <div class="chat-header">
+                <img src="assets/stickman.svg" alt="stickman" class="chat-icon">
+                <span>ふくみー・案内人</span>
+                <button id="chat-toggle">▼</button>
+            </div>
+            <div id="chat-box" class="chat-box-hidden">
+                <div id="chat-messages"></div>
+                <div class="chat-input-area">
+                    <input type="text" id="user-input" placeholder="なにか手伝う？">
+                    <button id="send-btn">送信</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>
